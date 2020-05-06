@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+nav{
+    font-size: 6.5em;
+    margin: 0 20px 0 20px;
+    height: 130px;
+    width: calc(100vw - 40px);
+    border-top: 2px solid #000;
+    overflow: hidden;
+    position: absolute;
+    bottom: -110px;
+    transition: transform 1s ease;
+    display: flex;
+    text-transform: uppercase;
+    text-align: center;
+}
+nav:hover{
+    transform: translateY(-110px);
+}
+nav div{
+    border-top: 1px solid #000;
+    flex:1;
+    align-items: stretch;
+}
+nav div:nth-child(-n+3){
+    border-right: 3px solid #000;
+}
+nav div:hover{
+    color:#fff;
+    text-shadow: 2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000;
+}
+
+main{
+    width: 100vw;
+    height: calc(100vh - 100px);
+}
+main .galeria1{
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    width: 40%;
+    transition: all 1s ease;
+}
+main .galeria2{
+    position: absolute;
+    left: 4%;
+    top: 11%;
+    width: 20%;
+    transition: all 1s ease;
+
+}
+.galeria1:hover, .galeria2:hover{
+    transform: scale(1.1);
+}
+img{
+    position: absolute;
+    transition: all 0.4s ease;
+}
+.galeria1 img{
+    width: 300px;
+}
+.galeria2 img{
+    width: 150px;
+}
+img:nth-child(1){
+    right: 30px;
+    top: -40px
+}
+img:nth-child(2){
+    left: 20px;
+}
+img:nth-child(3){
+    top: 20px;
+    right: 60px;
+}
+img:hover{
+    z-index: 1;
+}
